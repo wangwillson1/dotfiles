@@ -1,0 +1,6 @@
+shell: zsh
+region: us-east-1
+dotfiles: https://github.com/wangwillson1/dotfiles
+editor: vscode
+vscode-extensions:
+  - "bazelbuild.vscode-bazel"
