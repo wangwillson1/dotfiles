@@ -1,16 +1,31 @@
+[url "git@github.com:DataDog/"]
+	insteadOf = https://github.com/DataDog/
+
+[user]
+	name = Willson Wang
+	email = willson.wang@datadoghq.com
+	signingkey = SHA256:6rtMny0Ox34YS7InokrrpZ2vO0ItF7SpviGzfM+zC7Q
+
+[url "ssh://git@github.com"]
+	insteadOf = https://github.com
+
 [fetch]
 	prune = true
-[pull]
-	rebase = false
 [push]
-        autoSetupRemote = true
-[user]
-        name = Willson Wang
-        email = willson.wang@datadoghq.com
-	signingkey = SHA256:6rtMny0Ox34YS7InokrrpZ2vO0ItF7SpviGzfM+zC7Q
+	autoSetupRemote = true
+[pull]
+	ff = only
 [commit]
 	gpgsign = true
 [gpg]
 	format = ssh
-[url "git@github.com:DataDog/"]
-        insteadOf = https://github.com/DataDog/
+[tag]
+	gpgSign = true
+[gpg "ssh"]
+	program = dd-gitsign
+	allowedSignersFile = /Users/mike.graf/.config/gitsign/allowed-signers
+[core]
+	hooksPath = /usr/local/dd/global_hooks
+[dd-gitsign]
+	username = wangwillson1
+
