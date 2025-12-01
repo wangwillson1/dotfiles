@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+set -e
+bzl run //:gazelle-update-repos && bzl run //:go -- mod tidy && bzl run //third_party/go:mod_graph_update && bzl run //:gazelle
